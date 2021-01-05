@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<style>
+*{
+font-size:1.2rem;
+}
+	li{
+	
+	margin-top:2em;
+	margin-bottom:2em;
+	font-size:1rem;
+	}
+	body{
+	margin:5px;
+	padding:5px;
+	background: #a8ff78;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #78ffd6, #a8ff78);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #78ffd6, #a8ff78); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	}
+	
+	
+	.main{
+	width:100%;
+	border:2px solid maroon;
+	margin:0 auto;
+	padding:5px;}
+	
+	.btn {
+  
+  padding: 5px 15px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background: maroon;
+    border: none;
+    border-radius: 11px;
+    box-shadow: 0 5px #bd7575;
+}
+
+.btn:hover {background-color: #000080;
+color:#fff;
+box-shadow: 0 5px #72bcd4;
+}
+
+.btn:active {
+  background-color: #000080;
+color:#fff;
+box-shadow: 0 5px #72bcd4;
+  transform: translateY(4px);
+}
+.submit {
+  display: inline-block;
+  border-radius: 4px;
+background-color:#861657;
+background-image:linear-gradient(326deg, #861657 0%, #ffa69e 74%);
+
+
+
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+
+  padding: 10px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.submit span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.submit span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.submit:hover span {
+  padding-right: 25px;
+}
+
+.submit:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+</head>
+<body>
+<div>
+<div class="main rounded"><br>
+<h3>&nbsp;Fill in the blanks with Appropriate Terms: (Click them)</h3>
+<ol>
+<li>A mouse is a <span id="blank1">_________</span> device.&nbsp;&nbsp;&nbsp;&nbsp;<button id="b1" class="btn" onclick="check(this);">tracking</button>&nbsp;&nbsp;<button id="b1" class="btn" onclick="check(this);">pointing</button></li>
+<li>The mat on which we keep our mouse is called <span id="blank2"> _________</span>.&nbsp;&nbsp;&nbsp;&nbsp;<button id="b2" class="btn" onclick="check(this);">mouse mat</button>&nbsp;&nbsp;<button class="btn" id="b2" onclick="check(this);">mouse pad</button></li>
+<li>A mouse generally has <span id="blank3"> _________</span> buttons.&nbsp;&nbsp;&nbsp;&nbsp;<button id="b3" class="btn" onclick="check(this);">three</button>&nbsp;&nbsp;<button class="btn" id="b3" onclick="check(this);">two</button></li>
+<li>A mouse is connected to the <span id="blank4"> _________</span>.&nbsp;&nbsp;&nbsp;&nbsp;<button id="b4" class="btn" onclick="check(this);">UPS</button>&nbsp;&nbsp;<button class="btn" id="b4" onclick="check(this);">CPU</button></li>
+<li>The scroll wheel scrolls the <span id="blank5"> _________</span> screen up and down.&nbsp;&nbsp;&nbsp;&nbsp;<button id="b5" class="btn" onclick="check(this);">TV</button>&nbsp;&nbsp;<button class="btn" id="b5" onclick="check(this);">monitor</button></li>
+<li>Clicking the left button once is called <span id="blank6"> _________</span>.&nbsp;&nbsp;&nbsp;&nbsp;<button id="b6" class="btn" onclick="check(this);">double click</button>&nbsp;&nbsp;<button class="btn" id="b6" onclick="check(this);">single click</button></li>
+<li>Double click <span id="blank7"> _________</span> a file or folder.&nbsp;&nbsp;&nbsp;&nbsp;<button id="b7" class="btn" onclick="check(this);">selects</button>&nbsp;&nbsp;<button class="btn" id="b7" onclick="check(this);">opens</button></li>
+<li><span id="blank8"> _________</span> means clicking the left button twice.&nbsp;&nbsp;&nbsp;&nbsp;<button id="b8" class="btn" onclick="check(this);">double click</button>&nbsp;&nbsp;<button class="btn" id="b8" onclick="check(this);">single click</button></li>
+<li>Single click <span id="blank9"> _________</span> a file or folder.&nbsp;&nbsp;&nbsp;&nbsp;<button id="b9" class="btn" onclick="check(this);">selects</button>&nbsp;&nbsp;<button class="btn" id="b9" onclick="check(this);">opens</button></li>
+</ol>
+<br>
+<center><button class="submit"><b><span>Submit</span></b></button></center>
+<br>
+</div>
+</div>
+<script>
+function check(x){
+if(x.id=='b1'){
+document.getElementById('blank1').innerHTML="<span style='color:red'><u>" +x.innerHTML+ "</u></span> ";
+}
+if(x.id=='b2'){
+document.getElementById('blank2').innerHTML="<span style='color:red'><u>" +x.innerHTML+ "</u></span> ";
+}
+if(x.id=='b3'){
+document.getElementById('blank3').innerHTML="<span style='color:red'><u>" +x.innerHTML+ "</u></span> ";
+}
+if(x.id=='b4'){
+document.getElementById('blank4').innerHTML="<span style='color:red'><u>" +x.innerHTML+ "</u></span> ";
+}
+if(x.id=='b5'){
+document.getElementById('blank5').innerHTML="<span style='color:red'><u>" +x.innerHTML+ "</u></span> ";
+}
+if(x.id=='b6'){
+document.getElementById('blank6').innerHTML="<span style='color:red'><u>" +x.innerHTML+ "</u></span> ";
+}
+if(x.id=='b7'){
+document.getElementById('blank7').innerHTML="<span style='color:red'><u>" +x.innerHTML+ "</u></span> ";
+}
+if(x.id=='b8'){
+document.getElementById('blank8').innerHTML="<span style='color:red'><u>" +x.innerHTML+ "</u></span> ";
+}
+if(x.id=='b9'){
+document.getElementById('blank9').innerHTML="<span style='color:red'><u>" +x.innerHTML+ "</u></span> ";
+}
+
+}
+</script>
+
+</body>
+</html>
